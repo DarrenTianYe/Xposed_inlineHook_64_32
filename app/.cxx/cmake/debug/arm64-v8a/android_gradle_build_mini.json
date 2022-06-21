@@ -1,0 +1,21 @@
+{
+  "buildFiles": [
+    "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/CMakeLists.txt",
+    "/Users/darren/Library/Android/sdk/ndk-bundle/build/cmake/android.toolchain.cmake",
+    "/Users/darren/Library/Android/sdk/ndk-bundle/build/cmake/platforms.cmake",
+    "/Users/darren/Library/Android/sdk/ndk-bundle/build/cmake/compiler_id.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/darren/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/.cxx/cmake/debug/arm64-v8a\" clean"
+  ],
+  "buildTargetsCommand": "/Users/darren/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "native-lib-Debug-arm64-v8a": {
+      "artifactName": "native-lib",
+      "buildCommand": "/Users/darren/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/.cxx/cmake/debug/arm64-v8a\" native-lib",
+      "abi": "arm64-v8a",
+      "output": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so",
+      "runtimeFiles": []
+    }
+  }
+}

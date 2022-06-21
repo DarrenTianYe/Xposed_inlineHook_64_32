@@ -1,0 +1,23 @@
+# ninja log v5
+1	117	1655210058	CMakeFiles/native-lib.dir/relocate.c.o	e066ca360358e7fb
+1	142	1655210058	CMakeFiles/native-lib.dir/inlineHook.c.o	43228eb11da07314
+2	167	1655210058	CMakeFiles/native-lib.dir/hooktest.cpp.o	5b6a0ce8710073f3
+3	495	1655210058	CMakeFiles/native-lib.dir/native-lib.cpp.o	65caa8fc608ad0e4
+495	575	1655210058	/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	aed3f5f35c06b411
+2	356	1655794607	CMakeFiles/native-lib.dir/hooktest.cpp.o	5b6a0ce8710073f3
+3	658	1655794608	CMakeFiles/native-lib.dir/native-lib.cpp.o	65caa8fc608ad0e4
+658	833	1655794608	/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	aed3f5f35c06b411
+2	327	1655794882	CMakeFiles/native-lib.dir/hooktest.cpp.o	5b6a0ce8710073f3
+3	600	1655794882	CMakeFiles/native-lib.dir/native-lib.cpp.o	65caa8fc608ad0e4
+600	718	1655794882	/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	aed3f5f35c06b411
+2	112	1655794979	CMakeFiles/native-lib.dir/hooktest.cpp.o	5b6a0ce8710073f3
+112	177	1655794979	/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	aed3f5f35c06b411
+2	604	1655795381	CMakeFiles/native-lib.dir/hooktest.cpp.o	5b6a0ce8710073f3
+3	1045	1655795381	CMakeFiles/native-lib.dir/native-lib.cpp.o	65caa8fc608ad0e4
+1045	1220	1655795381	/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	aed3f5f35c06b411
+2	304	1655796803	CMakeFiles/native-lib.dir/hooktest.cpp.o	5b6a0ce8710073f3
+4	202	1655796894	CMakeFiles/native-lib.dir/hooktest.cpp.o	5b6a0ce8710073f3
+3	496	1655796935	CMakeFiles/native-lib.dir/native-lib.cpp.o	65caa8fc608ad0e4
+496	654	1655796935	/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	aed3f5f35c06b411
+2	291	1655797200	CMakeFiles/native-lib.dir/hooktest.cpp.o	5b6a0ce8710073f3
+292	474	1655797200	/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/cmake/debug/obj/armeabi-v7a/libnative-lib.so	aed3f5f35c06b411

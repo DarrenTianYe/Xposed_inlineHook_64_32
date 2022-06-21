@@ -1,0 +1,153 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:1:1-22:12
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:1:1-22:12
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:1:1-22:12
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:1:1-22:12
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/ff19cd21bc28a503476b6dbfb05a4f81/appcompat-v7-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/7c0ee75032942c00fdc7f745252354e1/support-fragment-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/df03fa65453af6b89ebdf4867466b8d4/animated-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/0530ad6a7ef2a86bb166210b8bbd83d7/support-core-ui-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/bff2c34b52b9be73a5b5d2ccf5f15f2f/support-core-utils-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/e767d8b02a1339e3009dffa47c51f4e3/support-vector-drawable-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:loader:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/958441d10a57e668d7e40e13b4d28abd/loader-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:viewpager:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/aed67c384f927cd85f88cf43f23fcb8f/viewpager-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/57818aa9eb4c580ee8c254261b3c9431/coordinatorlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/ba6e1a4682dd3724d0e79b28c64be1ad/drawerlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/23cd89d0c4f6213b4dbb245dbd867735/slidingpanelayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:customview:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/3bbc97478f7dd1d1adf1aec42b3b52e9/customview-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/2ca460044e588f5a135085a75223b2ad/swiperefreshlayout-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/97d8120287e9e703a981b9bea22550f0/asynclayoutinflater-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/f8a397328201698168ace7f239d1330f/support-compat-28.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/9021044956baeb6a767293e6ff4318ed/versionedparcelable-28.0.0/AndroidManifest.xml:17:1-25:12
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/267f46b65995c3cd682c90c14abd3a27/cursoradapter-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/de9e079fd7abd03661d7b43e15b21fad/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:documentfile:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/06d37c06d0d458c40b60a017915bac57/documentfile-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/b1d9265b80d3a4676b75a8cd4884fd4c/localbroadcastmanager-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:print:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/4d9887665f219e81bb67eece4129f644/print-28.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/37478451831cdc1b64bf7f4841eb6dc6/viewmodel-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/ca2248781da52b5d90c17a71e1030618/livedata-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/75aab1ca99d6a54dc56e7459aa551114/livedata-core-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.core:runtime:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/393cf15056d479ecca3d33feb70cd09f/runtime-1.1.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:interpolator:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/82bc176643bf0466636db9c4bfb19f59/interpolator-28.0.0/AndroidManifest.xml:17:1-22:12
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:1:1-22:12
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:1:1-22:12
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:1:1-22:12
+	package
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:2:5-40
+		INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:1:1-22:12
+		INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:1:1-22:12
+		INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:1:11-69
+application
+ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:4:5-21:19
+MERGED from [com.android.support:support-compat:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/f8a397328201698168ace7f239d1330f/support-compat-28.0.0/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:support-compat:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/f8a397328201698168ace7f239d1330f/support-compat-28.0.0/AndroidManifest.xml:22:5-94
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/9021044956baeb6a767293e6ff4318ed/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/9021044956baeb6a767293e6ff4318ed/versionedparcelable-28.0.0/AndroidManifest.xml:22:5-23:19
+	android:appComponentFactory
+		ADDED from [com.android.support:support-compat:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/f8a397328201698168ace7f239d1330f/support-compat-28.0.0/AndroidManifest.xml:22:18-91
+	android:supportsRtl
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:9:9-35
+	android:label
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:7:9-41
+	android:roundIcon
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:8:9-54
+	android:icon
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:6:9-43
+	android:allowBackup
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:5:9-35
+	android:theme
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:10:9-40
+meta-data#xposedmodule
+ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:12:9-14:36
+	android:value
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:14:13-33
+	android:name
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:13:13-40
+meta-data#xposeddescription
+ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:15:9-17:50
+	android:value
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:17:13-47
+	android:name
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:16:13-45
+meta-data#xposedminversion
+ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:18:9-20:34
+	android:value
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:20:13-31
+	android:name
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml:19:13-44
+uses-sdk
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/ff19cd21bc28a503476b6dbfb05a4f81/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/ff19cd21bc28a503476b6dbfb05a4f81/appcompat-v7-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/7c0ee75032942c00fdc7f745252354e1/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/7c0ee75032942c00fdc7f745252354e1/support-fragment-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/df03fa65453af6b89ebdf4867466b8d4/animated-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/df03fa65453af6b89ebdf4867466b8d4/animated-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/0530ad6a7ef2a86bb166210b8bbd83d7/support-core-ui-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/0530ad6a7ef2a86bb166210b8bbd83d7/support-core-ui-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/bff2c34b52b9be73a5b5d2ccf5f15f2f/support-core-utils-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/bff2c34b52b9be73a5b5d2ccf5f15f2f/support-core-utils-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/e767d8b02a1339e3009dffa47c51f4e3/support-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/e767d8b02a1339e3009dffa47c51f4e3/support-vector-drawable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/958441d10a57e668d7e40e13b4d28abd/loader-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:loader:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/958441d10a57e668d7e40e13b4d28abd/loader-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/aed67c384f927cd85f88cf43f23fcb8f/viewpager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:viewpager:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/aed67c384f927cd85f88cf43f23fcb8f/viewpager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/57818aa9eb4c580ee8c254261b3c9431/coordinatorlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:coordinatorlayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/57818aa9eb4c580ee8c254261b3c9431/coordinatorlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/ba6e1a4682dd3724d0e79b28c64be1ad/drawerlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:drawerlayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/ba6e1a4682dd3724d0e79b28c64be1ad/drawerlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/23cd89d0c4f6213b4dbb245dbd867735/slidingpanelayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:slidingpanelayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/23cd89d0c4f6213b4dbb245dbd867735/slidingpanelayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/3bbc97478f7dd1d1adf1aec42b3b52e9/customview-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:customview:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/3bbc97478f7dd1d1adf1aec42b3b52e9/customview-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/2ca460044e588f5a135085a75223b2ad/swiperefreshlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:swiperefreshlayout:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/2ca460044e588f5a135085a75223b2ad/swiperefreshlayout-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/97d8120287e9e703a981b9bea22550f0/asynclayoutinflater-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:asynclayoutinflater:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/97d8120287e9e703a981b9bea22550f0/asynclayoutinflater-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/f8a397328201698168ace7f239d1330f/support-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/f8a397328201698168ace7f239d1330f/support-compat-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/9021044956baeb6a767293e6ff4318ed/versionedparcelable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:versionedparcelable:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/9021044956baeb6a767293e6ff4318ed/versionedparcelable-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/267f46b65995c3cd682c90c14abd3a27/cursoradapter-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:cursoradapter:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/267f46b65995c3cd682c90c14abd3a27/cursoradapter-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/de9e079fd7abd03661d7b43e15b21fad/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/de9e079fd7abd03661d7b43e15b21fad/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/06d37c06d0d458c40b60a017915bac57/documentfile-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:documentfile:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/06d37c06d0d458c40b60a017915bac57/documentfile-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/b1d9265b80d3a4676b75a8cd4884fd4c/localbroadcastmanager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:localbroadcastmanager:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/b1d9265b80d3a4676b75a8cd4884fd4c/localbroadcastmanager-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/4d9887665f219e81bb67eece4129f644/print-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:print:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/4d9887665f219e81bb67eece4129f644/print-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/37478451831cdc1b64bf7f4841eb6dc6/viewmodel-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:viewmodel:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/37478451831cdc1b64bf7f4841eb6dc6/viewmodel-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/ca2248781da52b5d90c17a71e1030618/livedata-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/ca2248781da52b5d90c17a71e1030618/livedata-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/75aab1ca99d6a54dc56e7459aa551114/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:livedata-core:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/75aab1ca99d6a54dc56e7459aa551114/livedata-core-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/393cf15056d479ecca3d33feb70cd09f/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.core:runtime:1.1.1] /Users/darren/.gradle/caches/transforms-2/files-2.1/393cf15056d479ecca3d33feb70cd09f/runtime-1.1.1/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/82bc176643bf0466636db9c4bfb19f59/interpolator-28.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:interpolator:28.0.0] /Users/darren/.gradle/caches/transforms-2/files-2.1/82bc176643bf0466636db9c4bfb19f59/interpolator-28.0.0/AndroidManifest.xml:20:5-44
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+		ADDED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/AndroidManifest.xml

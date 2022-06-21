@@ -1,0 +1,171 @@
+ninja: Entering directory `/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/.cxx/cmake/debug/arm64-v8a'
+[1/5] Building C object CMakeFiles/native-lib.dir/inlineHook.c.o
+FAILED: CMakeFiles/native-lib.dir/inlineHook.c.o 
+/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/native-lib.dir/inlineHook.c.o -MF CMakeFiles/native-lib.dir/inlineHook.c.o.d -o CMakeFiles/native-lib.dir/inlineHook.c.o   -c /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:97:67: warning: declaration of 'struct pt_regs' will not be visible outside of this function [-Wvisibility]
+static bool doProcessThreadPC(struct inlineHookItem *item, struct pt_regs *regs, int action)
+                                                                  ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:105:17: error: incomplete definition of type 'struct pt_regs'
+                        offset = regs->ARM_pc - CLEAR_BIT0(item->target_addr);
+                                 ~~~~^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:97:67: note: forward declaration of 'struct pt_regs'
+static bool doProcessThreadPC(struct inlineHookItem *item, struct pt_regs *regs, int action)
+                                                                  ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:108:10: error: incomplete definition of type 'struct pt_regs'
+                                        regs->ARM_pc = (uint32_t) item->trampoline_instructions + item->trampoline_boundaries[i];
+                                        ~~~~^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:97:67: note: forward declaration of 'struct pt_regs'
+static bool doProcessThreadPC(struct inlineHookItem *item, struct pt_regs *regs, int action)
+                                                                  ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:108:21: warning: cast to smaller integer type 'uint32_t' (aka 'unsigned int') from 'void *' [-Wvoid-pointer-to-int-cast]
+                                        regs->ARM_pc = (uint32_t) item->trampoline_instructions + item->trampoline_boundaries[i];
+                                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:114:17: error: incomplete definition of type 'struct pt_regs'
+                        offset = regs->ARM_pc - (int) item->trampoline_instructions;
+                                 ~~~~^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:97:67: note: forward declaration of 'struct pt_regs'
+static bool doProcessThreadPC(struct inlineHookItem *item, struct pt_regs *regs, int action)
+                                                                  ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:114:28: warning: cast to smaller integer type 'int' from 'void *' [-Wvoid-pointer-to-int-cast]
+                        offset = regs->ARM_pc - (int) item->trampoline_instructions;
+                                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:117:10: error: incomplete definition of type 'struct pt_regs'
+                                        regs->ARM_pc = CLEAR_BIT0(item->target_addr) + item->orig_boundaries[i];
+                                        ~~~~^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:97:67: note: forward declaration of 'struct pt_regs'
+static bool doProcessThreadPC(struct inlineHookItem *item, struct pt_regs *regs, int action)
+                                                                  ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:129:17: error: variable has incomplete type 'struct pt_regs'
+        struct pt_regs regs;
+                       ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:129:9: note: forward declaration of 'struct pt_regs'
+        struct pt_regs regs;
+               ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:131:13: error: use of undeclared identifier 'PTRACE_GETREGS'
+        if (ptrace(PTRACE_GETREGS, tid, NULL, &regs) == 0) {
+                   ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:145:10: error: use of undeclared identifier 'PTRACE_SETREGS'
+                ptrace(PTRACE_SETREGS, tid, NULL, &regs);
+                       ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:156:21: warning: implicit declaration of function 'gettid' is invalid in C99 [-Wimplicit-function-declaration]
+        count = getAllTids(gettid(), tids);
+                           ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:158:9: warning: implicit declaration of function 'fork' is invalid in C99 [-Wimplicit-function-declaration]
+                pid = fork();
+                      ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:286:34: warning: cast to 'void *' from smaller integer type 'unsigned int' [-Wint-to-void-pointer-cast]
+        memcpy(item->orig_instructions, (void *) CLEAR_BIT0(item->target_addr), item->length);
+                                        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:298:11: warning: cast to 'void *' from smaller integer type 'unsigned int' [-Wint-to-void-pointer-cast]
+        mprotect((void *) PAGE_START(CLEAR_BIT0(item->target_addr)), PAGE_SIZE * 2, PROT_READ | PROT_WRITE | PROT_EXEC);
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:299:9: warning: cast to 'void *' from smaller integer type 'unsigned int' [-Wint-to-void-pointer-cast]
+        memcpy((void *) CLEAR_BIT0(item->target_addr), item->orig_instructions, item->length);
+               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:300:11: warning: cast to 'void *' from smaller integer type 'unsigned int' [-Wint-to-void-pointer-cast]
+        mprotect((void *) PAGE_START(CLEAR_BIT0(item->target_addr)), PAGE_SIZE * 2, PROT_READ | PROT_EXEC);
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:306:2: warning: implicit declaration of function 'cacheflush' is invalid in C99 [-Wimplicit-function-declaration]
+        cacheflush(CLEAR_BIT0(item->target_addr), CLEAR_BIT0(item->target_addr) + item->length, 0);
+        ^
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:349:11: warning: cast to 'void *' from smaller integer type 'unsigned int' [-Wint-to-void-pointer-cast]
+        mprotect((void *) PAGE_START(CLEAR_BIT0(item->target_addr)), PAGE_SIZE * 2, PROT_READ | PROT_WRITE | PROT_EXEC);
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:352:78: warning: cast to smaller integer type 'uint32_t' (aka 'unsigned int') from 'void *' [-Wvoid-pointer-to-int-cast]
+                *(item->proto_addr) = TEST_BIT0(item->target_addr) ? (uint32_t *) SET_BIT0((uint32_t) item->trampoline_instructions) : item->trampoline_instructions;
+                                                                                           ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:28:26: note: expanded from macro 'SET_BIT0'
+#define SET_BIT0(addr)          (addr | 1)
+                                 ^~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:352:56: warning: cast to 'uint32_t *' (aka 'unsigned int *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                *(item->proto_addr) = TEST_BIT0(item->target_addr) ? (uint32_t *) SET_BIT0((uint32_t) item->trampoline_instructions) : item->trampoline_instructions;
+                                                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:360:5: warning: cast to 'uint16_t *' (aka 'unsigned short *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                        ((uint16_t *) CLEAR_BIT0(item->target_addr))[i++] = 0xBF00;  // NOP
+                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:362:4: warning: cast to 'uint16_t *' (aka 'unsigned short *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                ((uint16_t *) CLEAR_BIT0(item->target_addr))[i++] = 0xF8DF;
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:363:4: warning: cast to 'uint16_t *' (aka 'unsigned short *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                ((uint16_t *) CLEAR_BIT0(item->target_addr))[i++] = 0xF000;     // LDR.W PC, [PC]
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:364:4: warning: cast to 'uint16_t *' (aka 'unsigned short *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                ((uint16_t *) CLEAR_BIT0(item->target_addr))[i++] = item->new_addr & 0xFFFF;
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:365:4: warning: cast to 'uint16_t *' (aka 'unsigned short *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                ((uint16_t *) CLEAR_BIT0(item->target_addr))[i++] = item->new_addr >> 16;
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:368:4: warning: cast to 'uint32_t *' (aka 'unsigned int *') from smaller integer type 'uint32_t' (aka 'unsigned int') [-Wint-to-pointer-cast]
+                ((uint32_t *) (item->target_addr))[0] = 0xe51ff004;     // LDR PC, [PC, #-4]
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:369:4: warning: cast to 'uint32_t *' (aka 'unsigned int *') from smaller integer type 'uint32_t' (aka 'unsigned int') [-Wint-to-pointer-cast]
+                ((uint32_t *) (item->target_addr))[1] = item->new_addr;
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:372:11: warning: cast to 'void *' from smaller integer type 'unsigned int' [-Wint-to-void-pointer-cast]
+        mprotect((void *) PAGE_START(CLEAR_BIT0(item->target_addr)), PAGE_SIZE * 2, PROT_READ | PROT_EXEC);
+                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c:376:2: warning: implicit declaration of function 'cacheflush' is invalid in C99 [-Wimplicit-function-declaration]
+        cacheflush(CLEAR_BIT0(item->target_addr), CLEAR_BIT0(item->target_addr) + item->length, 0);
+        ^
+22 warnings and 7 errors generated.
+[2/5] Building C object CMakeFiles/native-lib.dir/relocate.c.o
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c:239:25: warning: operator '<<' has lower precedence than '+'; '+' will be evaluated first [-Wshift-op-parentheses]
+                        value = ALIGN_PC(pc) + (instruction & 0xFF) << 2;
+                                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~ ~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c:239:25: note: place parentheses around the '+' expression to silence this warning
+                        value = ALIGN_PC(pc) + (instruction & 0xFF) << 2;
+                                ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c:243:13: warning: cast to 'uint32_t *' (aka 'unsigned int *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                        value = ((uint32_t *) (ALIGN_PC(pc) + ((instruction & 0xFF) << 2)))[0];
+                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c:371:12: warning: cast to 'uint32_t *' (aka 'unsigned int *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                                addr = (uint32_t *) (ALIGN_PC(pc) + imm32);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c:374:12: warning: cast to 'uint32_t *' (aka 'unsigned int *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                                addr = (uint32_t *) (ALIGN_PC(pc) - imm32);
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c:583:16: warning: cast to 'uint32_t *' (aka 'unsigned int *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                                                value = ((uint32_t *) (pc + imm32))[0];
+                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c:586:16: warning: cast to 'uint32_t *' (aka 'unsigned int *') from smaller integer type 'unsigned int' [-Wint-to-pointer-cast]
+                                                value = ((uint32_t *) (pc - imm32))[0];
+                                                         ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c:610:18: warning: & has lower precedence than ==; == will be evaluated first [-Wparentheses]
+        if (target_addr & 1 == 1) {
+                        ^~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c:610:18: note: place parentheses around the '==' expression to silence this warning
+        if (target_addr & 1 == 1) {
+                        ^
+                          (     )
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c:610:18: note: place parentheses around the & expression to evaluate it first
+        if (target_addr & 1 == 1) {
+                        ^
+            (              )
+7 warnings generated.
+[3/5] Building CXX object CMakeFiles/native-lib.dir/hooktest.cpp.o
+FAILED: CMakeFiles/native-lib.dir/hooktest.cpp.o 
+/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC -MD -MT CMakeFiles/native-lib.dir/hooktest.cpp.o -MF CMakeFiles/native-lib.dir/hooktest.cpp.o.d -o CMakeFiles/native-lib.dir/hooktest.cpp.o -c /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/hooktest.cpp
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/hooktest.cpp:25:28: error: cast from pointer to smaller type 'uint32_t' (aka 'unsigned int') loses information
+    if (registerInlineHook((uint32_t) rand, (uint32_t) new_rand, (uint32_t **) &old_rand) != ELE7EN_OK) {
+                           ^~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/hooktest.cpp:25:45: error: cast from pointer to smaller type 'uint32_t' (aka 'unsigned int') loses information
+    if (registerInlineHook((uint32_t) rand, (uint32_t) new_rand, (uint32_t **) &old_rand) != ELE7EN_OK) {
+                                            ^~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/hooktest.cpp:28:20: error: cast from pointer to smaller type 'uint32_t' (aka 'unsigned int') loses information
+    if (inlineHook((uint32_t) rand) != ELE7EN_OK) {
+                   ^~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/hooktest.cpp:37:22: error: cast from pointer to smaller type 'uint32_t' (aka 'unsigned int') loses information
+    if (inlineUnHook((uint32_t) rand) != ELE7EN_OK) {
+                     ^~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/hooktest.cpp:74:28: error: cast from pointer to smaller type 'uint32_t' (aka 'unsigned int') loses information
+    if (registerInlineHook((uint32_t) recvfrom, (uint32_t) new_recvfrom, (uint32_t **) &old_recvfrom) != ELE7EN_OK) {
+                           ^~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/hooktest.cpp:74:49: error: cast from pointer to smaller type 'uint32_t' (aka 'unsigned int') loses information
+    if (registerInlineHook((uint32_t) recvfrom, (uint32_t) new_recvfrom, (uint32_t **) &old_recvfrom) != ELE7EN_OK) {
+                                                ^~~~~~~~~~~~~~~~~~~~~~~
+/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/hooktest.cpp:77:20: error: cast from pointer to smaller type 'uint32_t' (aka 'unsigned int') loses information
+    if (inlineHook((uint32_t) recvfrom) != ELE7EN_OK) {
+                   ^~~~~~~~~~~~~~~~~~~
+7 errors generated.
+[4/5] Building CXX object CMakeFiles/native-lib.dir/native-lib.cpp.o
+ninja: build stopped: subcommand failed.
