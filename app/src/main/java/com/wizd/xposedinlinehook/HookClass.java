@@ -34,6 +34,7 @@ public class HookClass implements  IXposedHookLoadPackage, IXposedHookZygoteInit
             return;
         }
 
+        //cp /data/data/com.wizd.xposedinlinehook/lib/libnative-lib.so /data/data/com.eg.android.AlipayGphone/
        // System.load(dataPath + "/lib/libnative-lib.so");
         Log.e("darren_haha", "darren.aftereHook."+ loadPackageParam.packageName);
         System.load("/data/data/com.eg.android.AlipayGphone/libnative-lib.so");
