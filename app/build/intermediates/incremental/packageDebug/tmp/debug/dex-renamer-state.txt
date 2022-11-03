@@ -1,4 +1,4 @@
-#Tue Jun 21 15:40:00 CST 2022
-base.0=/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Thu Nov 03 21:25:55 CST 2022
+base.0=/Users/darren/work/code/github/com.system.installer/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml",
+            "outputFile": "/Users/darren/work/code/github/com.system.installer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-tr/values-tr.xml",
             "map": [
                 {
                     "source": "/Users/darren/.gradle/caches/transforms-2/files-2.1/f8a397328201698168ace7f239d1330f/support-compat-28.0.0/res/values-tr/values-tr.xml",

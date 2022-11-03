@@ -17,11 +17,34 @@ add_library( # Sets the name of the library.
         SHARED
 
         # Provides a relative path to your source file(s).
-        inlineHook.c
-        relocate.c
-        hooktest.cpp
+        inlinehook32/inlineHook.c
+        inlinehook32/relocate.c
+        inlinehook32/hooktest32.cpp
 
-        native-lib.cpp)
+        inlinehook64/And64InlineHook.hpp
+        inlinehook64/And64InlineHook.cpp
+        inlinehook64/hook_main.cpp
+        inlinehook64/hooktest64.h
+
+        native-lib.cpp
+        dvm/dvm.cpp
+#        dvm/dvm_getuid.cpp
+#        dvm/anti_root.cpp
+#        dvm/anti_get_upload_feild_id.cpp
+#        dvm/anti_xposed.cpp
+        dvm/anti_get_dex_so_feild_id.cpp
+
+#        antiXposed/xposed-detector.cpp
+#        #antiXposed/xposed.cpp
+#        antiXposed/find-name.cpp
+#        antiXposed/classloader.cpp
+#        antiXposed/logging.cpp
+#        antiXposed/hash.cpp
+#        antiXposed/plt.cpp
+#        antiXposed/tinynew.cpp
+
+
+        )
 
 # Searches for a specified prebuilt library and stores the path as a
 # variable. Because CMake includes system libraries in the search path by

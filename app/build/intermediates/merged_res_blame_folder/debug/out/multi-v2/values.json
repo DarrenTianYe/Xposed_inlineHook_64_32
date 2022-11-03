@@ -1,10 +1,29 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/Users/darren/work/code/github/com.system.installer/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/res/values/colors.xml",
+                    "source": "/Users/darren/work/code/github/com.system.installer/app/src/main/res/values/styles.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "57",
+                        "endLines": "8",
+                        "endColumns": "12",
+                        "endOffsets": "376"
+                    },
+                    "to": {
+                        "startLines": "260",
+                        "startColumns": "4",
+                        "startOffsets": "17389",
+                        "endLines": "265",
+                        "endColumns": "12",
+                        "endOffsets": "17703"
+                    }
+                },
+                {
+                    "source": "/Users/darren/work/code/github/com.system.installer/app/src/main/res/values/colors.xml",
                     "from": {
                         "startLines": "4,2,3",
                         "startColumns": "4,4,4",
@@ -37,23 +56,6 @@
                         "endLines": "2,1726,2430,2519",
                         "endColumns": "60,12,24,24",
                         "endOffsets": "161,116695,154660,159871"
-                    }
-                },
-                {
-                    "source": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "17",
-                        "endColumns": "53",
-                        "endOffsets": "66"
-                    },
-                    "to": {
-                        "startLines": "252",
-                        "startColumns": "4",
-                        "startOffsets": "16769",
-                        "endColumns": "53",
-                        "endOffsets": "16818"
                     }
                 },
                 {
@@ -95,22 +97,20 @@
                     }
                 },
                 {
-                    "source": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/res/values/styles.xml",
+                    "source": "/Users/darren/work/code/github/com.system.installer/app/src/main/res/values/strings.xml",
                     "from": {
-                        "startLines": "3",
+                        "startLines": "1",
                         "startColumns": "4",
-                        "startOffsets": "57",
-                        "endLines": "8",
-                        "endColumns": "12",
-                        "endOffsets": "376"
+                        "startOffsets": "17",
+                        "endColumns": "53",
+                        "endOffsets": "66"
                     },
                     "to": {
-                        "startLines": "260",
+                        "startLines": "252",
                         "startColumns": "4",
-                        "startOffsets": "17389",
-                        "endLines": "265",
-                        "endColumns": "12",
-                        "endOffsets": "17703"
+                        "startOffsets": "16769",
+                        "endColumns": "53",
+                        "endOffsets": "16818"
                     }
                 }
             ]

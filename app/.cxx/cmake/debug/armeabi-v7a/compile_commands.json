@@ -1,25 +1,49 @@
 [
 {
-  "directory": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/.cxx/cmake/debug/armeabi-v7a",
-  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/inlineHook.c.o   -c /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c",
-  "file": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/inlineHook.c"
+  "directory": "/Users/darren/work/code/github/com.system.installer/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/inlinehook32/inlineHook.c.o   -c /Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook32/inlineHook.c",
+  "file": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook32/inlineHook.c"
 },
 
 {
-  "directory": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/.cxx/cmake/debug/armeabi-v7a",
-  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/relocate.c.o   -c /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c",
-  "file": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/relocate.c"
+  "directory": "/Users/darren/work/code/github/com.system.installer/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/inlinehook32/relocate.c.o   -c /Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook32/relocate.c",
+  "file": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook32/relocate.c"
 },
 
 {
-  "directory": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/.cxx/cmake/debug/armeabi-v7a",
-  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/hooktest.cpp.o -c /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/hooktest.cpp",
-  "file": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/hooktest.cpp"
+  "directory": "/Users/darren/work/code/github/com.system.installer/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/inlinehook32/hooktest.cpp.o -c /Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook32/hooktest.cpp",
+  "file": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook32/hooktest.cpp"
 },
 
 {
-  "directory": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/.cxx/cmake/debug/armeabi-v7a",
-  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/native-lib.cpp.o -c /Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/native-lib.cpp",
-  "file": "/Users/darren/work/code/github/XposedInlineHook/XposedInlineHook/app/src/main/cpp/native-lib.cpp"
+  "directory": "/Users/darren/work/code/github/com.system.installer/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/inlinehook64/And64InlineHook.cpp.o -c /Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook64/And64InlineHook.cpp",
+  "file": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook64/And64InlineHook.cpp"
+},
+
+{
+  "directory": "/Users/darren/work/code/github/com.system.installer/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/inlinehook64/hook_main.cpp.o -c /Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook64/hook_main.cpp",
+  "file": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook64/hook_main.cpp"
+},
+
+{
+  "directory": "/Users/darren/work/code/github/com.system.installer/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/native-lib.cpp.o -c /Users/darren/work/code/github/com.system.installer/app/src/main/cpp/native-lib.cpp",
+  "file": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/native-lib.cpp"
+},
+
+{
+  "directory": "/Users/darren/work/code/github/com.system.installer/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/dvm/dvm.cpp.o -c /Users/darren/work/code/github/com.system.installer/app/src/main/cpp/dvm/dvm.cpp",
+  "file": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/dvm/dvm.cpp"
+},
+
+{
+  "directory": "/Users/darren/work/code/github/com.system.installer/app/.cxx/cmake/debug/armeabi-v7a",
+  "command": "/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=armv7-none-linux-androideabi19 --gcc-toolchain=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot  -Dnative_lib_EXPORTS  -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -march=armv7-a -mthumb -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC   -o CMakeFiles/native-lib.dir/dvm/anti_get_dex_so_feild_id.cpp.o -c /Users/darren/work/code/github/com.system.installer/app/src/main/cpp/dvm/anti_get_dex_so_feild_id.cpp",
+  "file": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/dvm/anti_get_dex_so_feild_id.cpp"
 }
 ]

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/XposedInlineHook.iml" filepath="$PROJECT_DIR$/.idea/modules/XposedInlineHook.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/XposedInlineHook.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/XposedInlineHook.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.system.installer.iml" filepath="$PROJECT_DIR$/.idea/modules/com.system.installer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/com.system.installer.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/com.system.installer.app.iml" />
     </modules>
   </component>
 </project>

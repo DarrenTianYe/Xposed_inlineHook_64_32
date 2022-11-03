@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.wizd.xposedinlinehook",
+  "applicationId": "com.system.installer.acc",
   "variantName": "debug",
   "elements": [
     {

@@ -4,15 +4,24 @@ android {
     compileSdkVersion 31
     ndkVersion '22.1.7171670'
     defaultConfig {
-        applicationId "com.wizd.xposedinlinehook"
+        applicationId "com.system.installer.acc"
         minSdkVersion 19
         targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
-        ndk{
-            abiFilter("armeabi-v7a")
+        ndk {
+            //选择要添加的对应cpu类型的.so库。
+            //abiFilters  'armeabi-v7a'
+            abiFilters  'arm64-v8a'
+            // 还可以添加 armeabi-v7a
+            // 'arm64-v8a', 64 bit ARM architecture,it can use v7 version
+            //              unless you are too much concerned about performance
+            // mips,mips64, There are no devices with MIPS
+            //  x86_64, No android devices and anyway it can use X86 version
+            //  armeabi, very old architecture. Unsupported after Android 4.4
+            // 'x86', Intel based devices
         }
     }
     sourceSets {
