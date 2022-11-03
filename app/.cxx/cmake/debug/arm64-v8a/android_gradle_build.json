@@ -42,16 +42,6 @@
           "workingDirectoryOrdinal": 0
         },
         {
-          "src": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/dvm/dvm.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
-          "src": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/dvm/anti_get_dex_so_feild_id.cpp",
-          "flagsOrdinal": 1,
-          "workingDirectoryOrdinal": 0
-        },
-        {
           "src": "/Users/darren/work/code/github/com.system.installer/app/src/main/cpp/inlinehook32/inlineHook.c",
           "flagsOrdinal": 1,
           "workingDirectoryOrdinal": 0

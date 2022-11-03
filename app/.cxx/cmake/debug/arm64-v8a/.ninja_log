@@ -34,3 +34,9 @@
 2	33	1667482075	CMakeFiles/native-lib.dir/inlinehook32/relocate.c.o	d2a4a588b7b5be40
 2	42	1667482075	CMakeFiles/native-lib.dir/inlinehook32/inlineHook.c.o	515821fac024df5f
 43	130	1667482075	/Users/darren/work/code/github/com.system.installer/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	f3cce27863cba57a
+4	441	1667482792	CMakeFiles/native-lib.dir/Users/darren/work/code/androidProject/MytoolsProject/app/src/main/cpp/common/anti_get_dex_so_feild_id.cpp.o	5dc86b52eb814ded
+2	759	1667482792	CMakeFiles/native-lib.dir/Users/darren/work/code/androidProject/MytoolsProject/app/src/main/cpp/common/dvm.cpp.o	1ec8810679a571c1
+2	410	1667482804	CMakeFiles/native-lib.dir/native-lib.cpp.o	73671318ffbdaca2
+410	581	1667482804	/Users/darren/work/code/github/com.system.installer/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	881e061b54ea9be3
+4	671	1667482886	CMakeFiles/native-lib.dir/native-lib.cpp.o	73671318ffbdaca2
+671	748	1667482886	/Users/darren/work/code/github/com.system.installer/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so	1fc52ad21d79ffa5

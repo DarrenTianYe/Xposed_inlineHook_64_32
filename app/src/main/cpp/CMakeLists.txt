@@ -27,22 +27,6 @@ add_library( # Sets the name of the library.
         inlinehook64/hooktest64.h
 
         native-lib.cpp
-        dvm/dvm.cpp
-#        dvm/dvm_getuid.cpp
-#        dvm/anti_root.cpp
-#        dvm/anti_get_upload_feild_id.cpp
-#        dvm/anti_xposed.cpp
-        dvm/anti_get_dex_so_feild_id.cpp
-
-#        antiXposed/xposed-detector.cpp
-#        #antiXposed/xposed.cpp
-#        antiXposed/find-name.cpp
-#        antiXposed/classloader.cpp
-#        antiXposed/logging.cpp
-#        antiXposed/hash.cpp
-#        antiXposed/plt.cpp
-#        antiXposed/tinynew.cpp
-
 
         )
 

@@ -1,4 +1,2 @@
 ninja: Entering directory `/Users/darren/work/code/github/com.system.installer/app/.cxx/cmake/debug/arm64-v8a'
-[1/3] Building C object CMakeFiles/native-lib.dir/inlinehook32/relocate.c.o
-[2/3] Building C object CMakeFiles/native-lib.dir/inlinehook32/inlineHook.c.o
-[3/3] Linking CXX shared library /Users/darren/work/code/github/com.system.installer/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so
+ninja: no work to do.

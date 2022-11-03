@@ -3,8 +3,6 @@
 
 #include "inlinehook32/inlineHook.h"
 #include "inlinehook32/hooktest32.h"
-#include "dvm/dvm.h"
-#include "antiXposed/xposed.h"
 #include  <android/log.h>
 #include "inlinehook64/hooktest64.h"
 
@@ -43,12 +41,6 @@ extern "C"
 JNIEXPORT jstring JNICALL
 Java_com_system_installer_acc_JNI_myTestComm(JNIEnv *env, jclass className, jobject ctx) {
 
-    LOGD("dvm_entry end >>>>>>>: Java_com_wizd_xposedinlinehook_imp_HookNativeImpl_testNative");
-    dvm_entry2(env,ctx);
-//  int xposed_stat = get_xposed_status(env, android_get_device_api_level());
-//  char *tmp = getDvmBlackSoAndUid(env, ctx, &error);
-    int ret = 0;//dvm_entry2(env, ctx);
-    LOGD("dvm_entry end >>>>>>>: %d", ret);
 
     return NULL;
 }

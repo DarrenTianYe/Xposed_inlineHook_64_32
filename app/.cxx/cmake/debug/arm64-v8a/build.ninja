@@ -92,18 +92,6 @@ build CMakeFiles/native-lib.dir/native-lib.cpp.o: CXX_COMPILER__native-lib /User
   FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC
   OBJECT_DIR = CMakeFiles/native-lib.dir
   OBJECT_FILE_DIR = CMakeFiles/native-lib.dir
-build CMakeFiles/native-lib.dir/dvm/dvm.cpp.o: CXX_COMPILER__native-lib /Users/darren/work/code/github/com.system.installer/app/src/main/cpp/dvm/dvm.cpp || cmake_object_order_depends_target_native-lib
-  DEFINES = -Dnative_lib_EXPORTS
-  DEP_FILE = CMakeFiles/native-lib.dir/dvm/dvm.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC
-  OBJECT_DIR = CMakeFiles/native-lib.dir
-  OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/dvm
-build CMakeFiles/native-lib.dir/dvm/anti_get_dex_so_feild_id.cpp.o: CXX_COMPILER__native-lib /Users/darren/work/code/github/com.system.installer/app/src/main/cpp/dvm/anti_get_dex_so_feild_id.cpp || cmake_object_order_depends_target_native-lib
-  DEFINES = -Dnative_lib_EXPORTS
-  DEP_FILE = CMakeFiles/native-lib.dir/dvm/anti_get_dex_so_feild_id.cpp.o.d
-  FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info  -fPIC
-  OBJECT_DIR = CMakeFiles/native-lib.dir
-  OBJECT_FILE_DIR = CMakeFiles/native-lib.dir/dvm
 
 # =============================================================================
 # Link build statements for SHARED_LIBRARY target native-lib
@@ -112,7 +100,7 @@ build CMakeFiles/native-lib.dir/dvm/anti_get_dex_so_feild_id.cpp.o: CXX_COMPILER
 #############################################
 # Link the shared library /Users/darren/work/code/github/com.system.installer/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so
 
-build /Users/darren/work/code/github/com.system.installer/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/inlinehook32/inlineHook.c.o CMakeFiles/native-lib.dir/inlinehook32/relocate.c.o CMakeFiles/native-lib.dir/inlinehook32/hooktest32.cpp.o CMakeFiles/native-lib.dir/inlinehook64/And64InlineHook.cpp.o CMakeFiles/native-lib.dir/inlinehook64/hook_main.cpp.o CMakeFiles/native-lib.dir/native-lib.cpp.o CMakeFiles/native-lib.dir/dvm/dvm.cpp.o CMakeFiles/native-lib.dir/dvm/anti_get_dex_so_feild_id.cpp.o | /Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so
+build /Users/darren/work/code/github/com.system.installer/app/build/intermediates/cmake/debug/obj/arm64-v8a/libnative-lib.so: CXX_SHARED_LIBRARY_LINKER__native-lib CMakeFiles/native-lib.dir/inlinehook32/inlineHook.c.o CMakeFiles/native-lib.dir/inlinehook32/relocate.c.o CMakeFiles/native-lib.dir/inlinehook32/hooktest32.cpp.o CMakeFiles/native-lib.dir/inlinehook64/And64InlineHook.cpp.o CMakeFiles/native-lib.dir/inlinehook64/hook_main.cpp.o CMakeFiles/native-lib.dir/native-lib.cpp.o | /Users/darren/Library/Android/sdk/ndk-bundle/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/21/liblog.so
   LANGUAGE_COMPILE_FLAGS = -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security   -O0 -fno-limit-debug-info
   LINK_FLAGS = -Wl,--exclude-libs,libgcc.a -Wl,--exclude-libs,libgcc_real.a -Wl,--exclude-libs,libatomic.a -static-libstdc++ -Wl,--build-id=sha1 -Wl,--no-rosegment -Wl,--fatal-warnings -Wl,--no-undefined -Qunused-arguments
   LINK_LIBRARIES = -llog -latomic -lm
