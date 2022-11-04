@@ -8,6 +8,7 @@ created time: 2015-01-17
 */
 
 #include "relocate.h"
+#include "../const.h"
 
 
 #if defined(__arm__)
@@ -444,6 +445,9 @@ static int relocateInstructionInThumb32(uint32_t pc, uint16_t high_instruction, 
 
 static void relocateInstructionInThumb(uint32_t target_addr, uint16_t *orig_instructions, int length, uint16_t *trampoline_instructions, int *orig_boundaries, int *trampoline_boundaries, int *count)
 {
+
+	LOGE("inlinehook32,relocateInstructionInThumb:%d, %x,%x, %d", length, target_addr,orig_instructions, *count);
+
 	int orig_pos;
 	int trampoline_pos;
 	uint32_t pc;
@@ -456,9 +460,17 @@ static void relocateInstructionInThumb(uint32_t target_addr, uint16_t *orig_inst
 		int offset;
 
 		orig_boundaries[*count] = orig_pos * sizeof(uint16_t);
+
 		trampoline_boundaries[*count] = trampoline_pos * sizeof(uint16_t);
+
+		// length = 12 个字节
+		LOGE("inlinehook32,Thumb:%x, %x,%x, %d,uint16_t:%d,uint32_t:%d", orig_boundaries, trampoline_boundaries,orig_instructions, *count,  sizeof(uint16_t), sizeof(uint32_t));
+
 		++(*count);
-		
+
+		LOGE("inlinehook32,orig_instructions:%x,%x ",orig_instructions[orig_pos], orig_instructions[orig_pos] >> 11);
+
+		// 判断是否是thumb32
 		if ((orig_instructions[orig_pos] >> 11) >= 0x1D && (orig_instructions[orig_pos] >> 11) <= 0x1F) {
 			if (orig_pos + 2 > length / sizeof(uint16_t)) {
 				break;
@@ -467,14 +479,12 @@ static void relocateInstructionInThumb(uint32_t target_addr, uint16_t *orig_inst
 			pc += sizeof(uint32_t);
 			trampoline_pos += offset;
 			orig_pos += 2;
-		}
-		else {
+		}else {
 			offset = relocateInstructionInThumb16(pc, orig_instructions[orig_pos], &trampoline_instructions[trampoline_pos]);
 			pc += sizeof(uint16_t);
 			trampoline_pos += offset;
 			++orig_pos;
 		}
-		
 		if (orig_pos >= length / sizeof(uint16_t)) {
 			break;
 		}
@@ -491,32 +501,41 @@ static void relocateInstructionInThumb(uint32_t target_addr, uint16_t *orig_inst
 
 static void relocateInstructionInArm(uint32_t target_addr, uint32_t *orig_instructions, int length, uint32_t *trampoline_instructions, int *orig_boundaries, int *trampoline_boundaries, int *count)
 {
+	LOGE("inlinehook32,relocateInstructionInArm:%d, %x,%x, %d", length, target_addr,orig_instructions, *count);
 	uint32_t pc;
 	uint32_t lr;
 	int orig_pos;
 	int trampoline_pos;
 
-	pc = target_addr + 8;
-	lr = target_addr + length;
+	pc = target_addr + 8; //执行到target_addr这个地址到时候，当前到PC是 XXX+8
+	lr = target_addr + length; // 指令的长度 arm 是 8 ， thumb 12
 
 	trampoline_pos = 0;
+
+	LOGE("inlinehook32,orig_pos < length / sizeof(uint32_t):%d", orig_pos < length / sizeof(uint32_t));
+
 	for (orig_pos = 0; orig_pos < length / sizeof(uint32_t); ++orig_pos) {
 		uint32_t instruction;
 		int type;
 
+		LOGE("inlinehook32,arm:%x, %x,%x, %d,uint16_t:%d,uint32_t:%d", orig_boundaries, trampoline_boundaries,orig_instructions, *count,  sizeof(uint16_t), sizeof(uint32_t));
+
 		orig_boundaries[*count] = orig_pos * sizeof(uint32_t);
 		trampoline_boundaries[*count] = trampoline_pos * sizeof(uint32_t);
-		++(*count);
 
-		instruction = orig_instructions[orig_pos];
+		LOGE("inlinehook32,arm:orig_boundaries[*count]:%d,trampoline_boundaries[*count]:%d", orig_boundaries[*count], trampoline_boundaries[*count]);
+		++(*count);
+		instruction = orig_instructions[orig_pos]; //获取原来函数的第一个指令内容
 		type = getTypeInArm(instruction);
+
+		//// 需要处理原来函数如果有跳转指令的情况，
 		if (type == BLX_ARM || type == BL_ARM || type == B_ARM || type == BX_ARM) {
 			uint32_t x;
 			int top_bit;
 			uint32_t imm32;
 			uint32_t value;
 
-			if (type == BLX_ARM || type == BL_ARM) {
+			if (type == BLX_ARM || type == BL_ARM) {  //有返回值跳转指令 需要首先保存LR 指令
 				trampoline_instructions[trampoline_pos++] = 0xE28FE004;	// ADD LR, PC, #4
 			}
 			trampoline_instructions[trampoline_pos++] = 0xE51FF004;  	// LDR PC, [PC, #-4]
@@ -531,38 +550,37 @@ static void relocateInstructionInArm(uint32_t target_addr, uint32_t *orig_instru
 			}
 			
 			top_bit = x >> 25;
-			imm32 = top_bit ? (x | (0xFFFFFFFF << 26)) : x;
-			if (type == BLX_ARM) {
+			imm32 = top_bit ? (x | (0xFFFFFFFF << 26)) : x; // imm32 表示立即数，获取立即数
+			if (type == BLX_ARM) {  // 切换指令类型
 				value = pc + imm32 + 1;
-			}
-			else {
+			}else {
 				value = pc + imm32;
 			}
 			trampoline_instructions[trampoline_pos++] = value;
-			
-		}
-		else if (type == ADD_ARM) {
+		}else if (type == ADD_ARM) {
+		    /**
+		     * ADD Rd, [PC, Rm]
+		     *
+		     */
 			int rd;
 			int rm;
 			int r;
 			
-			rd = (instruction & 0xF000) >> 12;
-			rm = instruction & 0xF;
+			rd = (instruction & 0xF000) >> 12;  //用位运算提取出指令中用到的Rd和Rm寄存器编号
+			rm = instruction & 0xF; //找出一个闲置寄存器r（既不是Rd也不是Rm），用来保存hook前的pc
 			
 			for (r = 12; ; --r) {
 				if (r != rd && r != rm) {
 					break;
 				}
 			}
-			
-			trampoline_instructions[trampoline_pos++] = 0xE52D0004 | (r << 12);	// PUSH {Rr}
-			trampoline_instructions[trampoline_pos++] = 0xE59F0008 | (r << 12);	// LDR Rr, [PC, #8]
-			trampoline_instructions[trampoline_pos++] = (instruction & 0xFFF0FFFF) | (r << 16);
-			trampoline_instructions[trampoline_pos++] = 0xE49D0004 | (r << 12);	// POP {Rr}
-			trampoline_instructions[trampoline_pos++] = 0xE28FF000;	// ADD PC, PC
+			trampoline_instructions[trampoline_pos++] = 0xE52D0004 | (r << 12);	// PUSH {Rr} //将Rr的值入栈暂存
+			trampoline_instructions[trampoline_pos++] = 0xE59F0008 | (r << 12);	// LDR Rr, [PC, #8] //将原始pc值写入Rx
+			trampoline_instructions[trampoline_pos++] = (instruction & 0xFFF0FFFF) | (r << 16); //用Rx编号替换指令中的PC编号
+			trampoline_instructions[trampoline_pos++] = 0xE49D0004 | (r << 12);	// POP {Rr} //暂存值出栈到Rx
+			trampoline_instructions[trampoline_pos++] = 0xE28FF000;	// ADD PC, PC //跳越4字节执行
 			trampoline_instructions[trampoline_pos++] = pc;
-		}
-		else if (type == ADR1_ARM || type == ADR2_ARM || type == LDR_ARM || type == MOV_ARM) {
+		}else if (type == ADR1_ARM || type == ADR2_ARM || type == LDR_ARM || type == MOV_ARM) {
 			int r;
 			uint32_t value;
 			
@@ -597,23 +615,29 @@ static void relocateInstructionInArm(uint32_t target_addr, uint32_t *orig_instru
 			trampoline_instructions[trampoline_pos++] = 0xE51F0000 | (r << 12);	// LDR Rr, [PC]
 			trampoline_instructions[trampoline_pos++] = 0xE28FF000;	// ADD PC, PC
 			trampoline_instructions[trampoline_pos++] = value;
-		}
-		else {
-			trampoline_instructions[trampoline_pos++] = instruction;
+
+		}else {
+
+			LOGE("inlinehook32,default %x", instruction);
+			trampoline_instructions[trampoline_pos++] = instruction; //原来函数的第2条指令
 		}
 		pc += sizeof(uint32_t);
 	}
-	
+
+	/**
+	 *
+	 */
 	trampoline_instructions[trampoline_pos++] = 0xe51ff004;	// LDR PC, [PC, #-4]
-	trampoline_instructions[trampoline_pos++] = lr;
+	trampoline_instructions[trampoline_pos++] = lr;    // lr 指向了原来函数的第三条指令。
+
+	LOGE("inlinehook32,(*count):%d,%d", (*count), lr);
 }
 
 void relocateInstruction(uint32_t target_addr, void *orig_instructions, int length, void *trampoline_instructions, int *orig_boundaries, int *trampoline_boundaries, int *count)
 {
 	if (target_addr & 1 == 1) {
 		relocateInstructionInThumb(target_addr - 1, (uint16_t *) orig_instructions, length, (uint16_t *) trampoline_instructions, orig_boundaries, trampoline_boundaries, count);
-	}
-	else {
+	}else {
 		relocateInstructionInArm(target_addr, (uint32_t *) orig_instructions, length, (uint32_t *) trampoline_instructions, orig_boundaries, trampoline_boundaries, count);
 	}
 }
