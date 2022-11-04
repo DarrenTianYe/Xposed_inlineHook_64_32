@@ -1,4 +1,4 @@
-# Xposed_inlineHook32
+这个是一个学习inline hook 的demo 
 
 hook 代码代码有详细注释
 
