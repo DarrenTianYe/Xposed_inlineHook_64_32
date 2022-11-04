@@ -1,7 +1,9 @@
 # Xposed_inlineHook32
 
+hook 代码代码有详细注释
 
-注意事项，
+
+编译注意事项，
 1.                 // 默认是thumb模式，现在指定arm 指令集编译    arguments '-DANDROID_TOOLCHAIN=clang', '-DANDROID_ARM_MODE=arm'
          externalNativeBuild {
             cmake {
@@ -22,7 +24,16 @@
 //                // 指定ABI
 //                abiFilters "armeabi-v7a" , "arm64-v8a"
             }
+            
+ 学习inline hook 相关博客
+ 
 2.https://leeon7.github.io/2019/10/27/android-inline-hook/
+3. https://xz.aliyun.com/t/9815 
+4.https://www.sunmoonblog.com/2019/07/15/inline-hook-basic/
+5. http://ele7enxxh.com/Android-Arm-Inline-Hook.html
+
+
+
 
 
 
