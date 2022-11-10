@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:orientation="vertical" >
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="获取基站相关" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button1"
+            android:text="获取GPS位置相关" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button2"
+            android:text="获取wifi相关" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button3"
+            android:text="获取IP相关" />
+
+        <Button
+            android:id="@+id/button5_bluetooth"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button4"
+            android:text="蓝牙相关" />
+
+        <Button
+            android:id="@+id/button6_battery"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button5_bluetooth"
+            android:text="获取电量相关" />
+
+        <Button
+            android:id="@+id/button_net"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button6_battery"
+            android:text="网络相关" />
+
+        <Button
+            android:id="@+id/button_appInfo"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_net"
+            android:text="应用相关" />
+
+        <Button
+            android:id="@+id/button_dtx"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_appInfo"
+            android:text="DTX相关" />
+
+
+        <TextView
+            android:id="@+id/sample_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_dtx"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="5dp"
+            android:fadeScrollbars="false"
+            android:padding="15px"
+            android:scrollbars="vertical"
+            android:text="sample_text" />
+
+
+    </RelativeLayout>
+
+</ScrollView>

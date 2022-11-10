@@ -17,7 +17,7 @@
 extern "C" JNIEXPORT jstring JNICALL
 Java_com_system_installer_acc_JNI_myTest32(
         JNIEnv *env,
-        jobject /* this */) {
+        jobject,  jobject ctx) {
     std::string hello = "Hello from C++";
 
 #if defined(__arm__)

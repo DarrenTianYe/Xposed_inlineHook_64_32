@@ -13,7 +13,7 @@ public class JNI {
         return gJni;
     }
 
-    public native String myTest32();
+    public native String myTest32(Context context);
     public native String myTest64(Context context);
     public native String myTestComm(Context context);
 }

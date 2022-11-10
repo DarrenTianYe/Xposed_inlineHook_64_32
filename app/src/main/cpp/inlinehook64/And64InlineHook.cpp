@@ -37,6 +37,8 @@
 #if defined(__aarch64__)
 
 #include "And64InlineHook.hpp"
+
+
 #define   A64_MAX_INSTRUCTIONS 5
 #define   A64_MAX_REFERENCES   (A64_MAX_INSTRUCTIONS * 2)
 #define   A64_NOP              0xd503201fu
@@ -131,7 +133,7 @@ static bool __fix_branch_imm(instruction inpp, instruction outpp, context *ctxp)
     static constexpr uint32_t mbits = 6u;
     static constexpr uint32_t mask  = 0xfc000000u; // 0b11111100000000000000000000000000
     static constexpr uint32_t rmask = 0x03ffffffu; // 0b00000011111111111111111111111111
-    static constexpr uint32_t op_b  = 0x14000000u; // "b"  ADDR_PCREL26
+    static constexpr uint32_t op_b  = 0x14000000u; // "b"  ADDR_PCREL26 //b 0xc # 当前PC = 0x100000000, 所以B的目的地址 = 0x100000000 + 0xc 也就是直接跳到C那里
     static constexpr uint32_t op_bl = 0x94000000u; // "bl" ADDR_PCREL26
 
     const uint32_t ins = *(*inpp);
@@ -147,7 +149,7 @@ static bool __fix_branch_imm(instruction inpp, instruction outpp, context *ctxp)
             // whether the branch should be converted to absolute jump
             if (!special_fix_type && llabs(new_pc_offset) >= (rmask >> 1)) {
                 bool b_aligned = (reinterpret_cast<uint64_t>(*outpp + 2) & 7u) == 0u;
-                if (opc == op_b) {
+                if (opc == op_b) { // if the src ins is  b (跳转指令不保存lr 结果)
                     if (b_aligned != true) {
                         (*outpp)[0] = A64_NOP;
                         ctxp->reset_current_ins(current_idx, ++(*outpp));
@@ -161,12 +163,30 @@ static bool __fix_branch_imm(instruction inpp, instruction outpp, context *ctxp)
                         (*outpp)[0] = A64_NOP;
                         ctxp->reset_current_ins(current_idx, ++(*outpp));
                     } //if
-                    (*outpp)[0] = 0x58000071u; // LDR X17, #12
-                    (*outpp)[1] = 0x1000009eu; // ADR X30, #16
+                    (*outpp)[0] = 0x58000071u; // LDR X17, #12  // 需要保存pc 指令
+                    (*outpp)[1] = 0x1000009eu; // ADR X30, #16   //X30被用来做链接寄存器LR（函数返回地址）
                     (*outpp)[2] = 0xd61f0220u; // BR X17
                     memcpy(*outpp + 3, &absolute_addr, sizeof(absolute_addr));
                     *outpp += 5;
                 } //if
+                /**
+                 * ADR: 加载PC相对地址的label地址，范围+/- 1MB;
+                 * ADR指令
+这是一条小范围的地址读取指令，它将基于PC的相对偏移的地址读到目标寄存器中；
+使用格式：ADR register exper
+
+编译时，首先会计算出当前PC到exper的偏移量#offset_to_exper
+然后会用ADD或SUB指令，来替换这条指令；例如ADD register,PC,#offset_to_exper
+register就是exper的地址；
+
+
+                 * ADRP: 加载PC相对地址，label地址，并且4KB对齐，范围+/- 4GB;
+                 *ADRP指令
+编译时，首先会计算出当前PC到exper的偏移量#offset_to_exper
+pc的低12位清零，然后加上偏移量，给register
+得到的地址，是含有label的4KB对齐内存区域的base地址；
+
+                 */
             } else {
                 if (special_fix_type) {
                     intptr_t ref_idx = ctxp->get_ref_ins_index(absolute_addr);
@@ -497,11 +517,24 @@ static A64HookInit __init;
 
 static uint32_t *FastAllocateTrampoline()
 {
+    // 判断是否是8字节码对齐
     static_assert((A64_MAX_INSTRUCTIONS * 10 * sizeof(uint32_t)) % 8 == 0, "8-byte align");
     static volatile int32_t __index = -1;
 
+    // i 原子操作自增加1
+
+    // i 原子操作自增加1
+
     int32_t i = __atomic_increase(&__index);
+
+    A64_LOGE("__atomic_increase:%d, %d", i, __index);
+
+//#define likely(x) __builtin_expect(!!(x), 1) //x很可能为真
+//#define unlikely(x) __builtin_expect(!!(x), 0) //x很可能为假
+
     if (__predict_true(i >= 0 && i < __countof(__insns_pool))) {
+
+        A64_LOGE("__atomic_increase:i:%d,%p",i,  __insns_pool[i]);
         return __insns_pool[i];
     } //if
 
@@ -512,14 +545,24 @@ static uint32_t *FastAllocateTrampoline()
 //-------------------------------------------------------------------------
 
 A64_JNIEXPORT void *A64HookFunctionV(void *const symbol, void *const replace,
-                                     void *const rwx, const uintptr_t rwx_size)
+                                     void *const trampolineParam, const uintptr_t rwx_size)
 {
     static constexpr uint_fast64_t mask = 0x03ffffffu; // 0b00000011111111111111111111111111
 
-    uint32_t *trampoline = static_cast<uint32_t *>(rwx), *original = static_cast<uint32_t *>(symbol);
+    uint32_t *trampoline = static_cast<uint32_t *>(trampolineParam);
+    uint32_t *original = static_cast<uint32_t *>(symbol);
+
+    A64_LOGE("uint32_t, int64_t, :%d, %d,%d,%d, %d", sizeof(trampoline), sizeof(int64_t), sizeof(char*), sizeof (int), sizeof (int*));
 
     static_assert(A64_MAX_INSTRUCTIONS >= 5, "please fix A64_MAX_INSTRUCTIONS!");
-    auto pc_offset = static_cast<int64_t>(__intval(replace) - __intval(symbol)) >> 2;
+
+    A64_LOGE("count distance of pointer: %p,%p, %d, %d", replace, symbol,  static_cast<int64_t>(__intval(replace) - __intval(symbol)),static_cast<int64_t>(__intval(replace) - __intval(symbol))/4);
+
+
+    auto pc_offset = static_cast<int64_t>(__intval(replace) - __intval(symbol)) >> 2; //一个指令占用4个字节 得到了跳转的字节码的个数 也就是中间有多少个字节
+
+    A64_LOGE("pc_offset,mask (mask >>1):%d, %d, %d", pc_offset, mask, (mask >>1));
+
     if (llabs(pc_offset) >= (mask >>1)) {
         int32_t count = (reinterpret_cast<uint64_t>(original + 2) & 7u) != 0u ? 5 : 4;
         if (trampoline) {
@@ -583,8 +626,10 @@ A64_JNIEXPORT void A64HookFunction(void *const symbol, void *const replace, void
         if (trampoline == NULL) return;
     } //if
 
+    //获取到trampoline 跳板 是一个二维数组 256，50
+
     // fix Android 10 .text segment is read-only by default
-    __make_rwx(symbol, 5 * sizeof(size_t));
+    __make_rwx(symbol, 5 * sizeof(size_t));  //修改需要hook的函数的代码段为rwx
 
     trampoline = A64HookFunctionV(symbol, replace, trampoline, A64_MAX_INSTRUCTIONS * 10u);
     if (trampoline == NULL && result != NULL) {
