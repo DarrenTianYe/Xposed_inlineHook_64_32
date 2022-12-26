@@ -1,10 +1,9 @@
-这个是一个学习inline hook 的demo 
-
-hook 代码代码有详细注释
-
-
-编译注意事项，
-1. // 默认是thumb模式，现在指定arm 指令集编译    arguments '-DANDROID_TOOLCHAIN=clang', '-DANDROID_ARM_MODE=arm'
+这个是一个学习inline hook 的demo , 
+1. xposed hook 代码修改后后免重启。 
+2. 若重启不生效，则需要修改gradle 中app的 versioncode 。 
+3. hook 代码代码有详细注释
+4. 编译注意事项，
+         1. // 默认是thumb模式，现在指定arm 指令集编译    arguments '-DANDROID_TOOLCHAIN=clang', '-DANDROID_ARM_MODE=arm'
          externalNativeBuild {
             cmake {
    // 默认是thumb模式，现在指定arm 指令集编译
@@ -23,14 +22,14 @@ hook 代码代码有详细注释
 //                abiFilters "armeabi-v7a" , "arm64-v8a"
             }
             
- 学习inline hook 相关博客
+ 5. 学习inline hook 相关博客
  
-2.https://leeon7.github.io/2019/10/27/android-inline-hook/
-3. https://xz.aliyun.com/t/9815 
-4.https://www.sunmoonblog.com/2019/07/15/inline-hook-basic/
-5. http://ele7enxxh.com/Android-Arm-Inline-Hook.html
+         2.https://leeon7.github.io/2019/10/27/android-inline-hook/
+         3. https://xz.aliyun.com/t/9815 
+         4.https://www.sunmoonblog.com/2019/07/15/inline-hook-basic/
+         5. http://ele7enxxh.com/Android-Arm-Inline-Hook.html
 
-目前hook的思路：
+6. 目前hook的思路：
 最简单的实现
 最容易想到的一种实现方式，使用跳板0覆盖一个函数的指令，当执行到这个函数的时候其实就是执行跳板0，跳板0在不修改寄存器的情况跳到执行hook函数。如果在hook函数内不需要执行原函数是最简单的，到这hook就是一个完整的hook。
 如果需要执行原函数，那么在跳板0覆盖指令之前先备份指令，执行原函数之前把备份的指令再覆盖回去，执行之后再覆盖回跳板0。确实是最简单的方法、也确实可以，
