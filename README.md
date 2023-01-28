@@ -3,6 +3,9 @@
 2. 若重启不生效，则需要修改gradle 中app的 versioncode 。 
 3. hook 代码代码有详细注释
 4. 编译注意事项，
+
+
+```
          1. // 默认是thumb模式，现在指定arm 指令集编译    arguments '-DANDROID_TOOLCHAIN=clang', '-DANDROID_ARM_MODE=arm'
          externalNativeBuild {
             cmake {
@@ -21,6 +24,7 @@
 //                // 指定ABI
 //                abiFilters "armeabi-v7a" , "arm64-v8a"
             }
+```
             
  5. 学习inline hook 相关博客
  
